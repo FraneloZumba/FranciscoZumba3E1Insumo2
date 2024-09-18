@@ -1,13 +1,17 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { RouterModule } from '@angular/router';
+import { SidemenuComponent } from './Components/sidemenu/sidemenu.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet],
-  templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+  imports: [RouterModule, SidemenuComponent],
+  template: `
+    <app-sidemenu></app-sidemenu>
+    <router-outlet></router-outlet>
+  `,
+  styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'sidemenu';
+  title = 'Insumo 2';
 }
